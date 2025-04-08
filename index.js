@@ -1,7 +1,7 @@
 require('dotenv').config(); // make sure this is at the top of the file
 const express = require("express"); // we want to use express
 const app = express(); // create an instance of express as app parent
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -131,8 +131,8 @@ app.delete('/tasks/:id', authenticateToken ,async (req, res) => {
 //START server
 
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
+  console.log(`Server running on port ${PORT}`);
+});
 
 
 process.on('SIGINT', async () => {
