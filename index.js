@@ -1,6 +1,5 @@
 require('dotenv').config(); // make sure this is at the top of the file
 import cors from 'cors';
-import express from 'express';
 const express = require("express"); // we want to use express
 const app = express(); // create an instance of express as app parent
 const PORT = process.env.PORT || 3000;
