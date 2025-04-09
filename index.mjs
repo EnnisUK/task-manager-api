@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 import cors from 'cors';
-const express = require("express"); // we want to use express
+import express from 'express'; // we want to use express
 const app = express(); // create an instance of express as app parent
 const PORT = process.env.PORT || 3000;
 
