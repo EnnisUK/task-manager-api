@@ -1,7 +1,11 @@
 require('dotenv').config(); // make sure this is at the top of the file
+import cors from 'cors';
+import express from 'express';
 const express = require("express"); // we want to use express
 const app = express(); // create an instance of express as app parent
 const PORT = process.env.PORT || 3000;
+
+
 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -13,6 +17,7 @@ const prisma = new PrismaClient();
 
 //Middlesware to parse JSON
 app.use(express.json()); //Tells the program how to interp incomming json packs
+app.use(cors);
 
 //In-memory "database"
 let tasks = [];
