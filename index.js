@@ -1,4 +1,5 @@
-require('dotenv').config(); // make sure this is at the top of the file
+import dotenv from 'dotenv';
+dotenv.config();
 import cors from 'cors';
 const express = require("express"); // we want to use express
 const app = express(); // create an instance of express as app parent
